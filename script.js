@@ -1,3 +1,3 @@
-function addToList() {
-    console.log('Clicked')
+function addToList(t) {
+    console.log(t.value)
 }
