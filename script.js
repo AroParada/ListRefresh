@@ -3,8 +3,8 @@ function addToList(t) {
 }
 
 var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
+list.addEventListener("click",function(event) {
+    if(event.target.tagName === 'LI') {
+        event.target.classList.toggle('checked')
+    }
 }, false);
