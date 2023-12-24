@@ -9,33 +9,22 @@ function addTask() { // function to add a task
     let li = document.createElement('li');
     li.innerHTML = inputBox.value;
     listContainer.appendChild(li);
+    let span = document.createElement('span'); // add x button
+    span.innerHTML = '\u00d7';
+    li.appendChild(span);
   }
   inputBox.value = '';
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Crosses out done items
-// var list = document.querySelector('ul');
-// list.addEventListener("click",function(event) {
-//     if(event.target.tagName === 'LI') {
-//         event.target.classList.toggle('checked')
-//     }
-// }, false);
+listContainer.addEventListener("click",function(e) {
+    if(e.target.tagName === 'LI') {
+        e.target.classList.toggle('checked')
+    }
+    else if(e.target.tagName === 'SPAN'){
+      e.target.parentElement.remove()
+    }
+}, false);
 
 
 // let data = [];
