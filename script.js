@@ -10,6 +10,7 @@ function addTask() { // function to add a task
     li.innerHTML = inputBox.value;
     listContainer.appendChild(li);
   }
+  inputBox.value = '';
 }
 
 
